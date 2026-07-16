@@ -1,0 +1,186 @@
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 240px;
+    margin-top: 80px;
+    padding: 30px;
+    padding-top: 150px;
+    background: #f4f7fc;
+    min-height: calc(100vh - 80px);
+    width: calc(100% - 240px);
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.dashboard-title {
+    font-size: 32px;
+    color: #0d47a1;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.dashboard-subtitle {
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+
+/* Dashboard Cards */
+
+.dashboard-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-bottom: 35px;
+}
+
+.dashboard-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1 1 250px;
+    min-width: 250px;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 12px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px);
+}
+
+.dashboard-card h3 {
+    color: #0d47a1;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.dashboard-card p {
+    font-size: 28px;
+    font-weight: bold;
+    color: #1565c0;
+}
+
+/* Quick Actions */
+
+.quick-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.action-btn {
+    background: #1565c0;
+    color: white;
+    border: none;
+    padding: 18px;
+    border-radius: 10px;
+    font-size: 17px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.action-btn:hover {
+    background: #0d47a1;
+}
+
+/* Recent Transactions */
+
+.transactions-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 12px rgba(0,0,0,0.1);
+}
+
+.transactions-section h2 {
+    color: #0d47a1;
+    margin-bottom: 20px;
+}
+
+.transaction-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.transaction-table th {
+    background: #1565c0;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+.transaction-table td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.transaction-table tr:hover {
+    background: #f4f7fc;
+}
+
+/* Status */
+
+.credit {
+    color: green;
+    font-weight: bold;
+}
+
+.debit {
+    color: red;
+    font-weight: bold;
+}
+
+/* Welcome Banner */
+
+.welcome-banner {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: linear-gradient(90deg,#1565c0,#42a5f5);
+    color: white;
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+}
+
+.welcome-banner h2 {
+    margin-bottom: 10px;
+}
+
+.welcome-banner p {
+    font-size: 17px;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+.dashboard-container{
+    margin-left:0;
+    margin-top:70px;
+    padding:15px;
+    width: 100%;
+}
+
+.dashboard-cards{
+    grid-template-columns:1fr;
+}
+
+.quick-actions{
+    grid-template-columns:1fr;
+}
+
+.transaction-table{
+    display:block;
+    overflow-x:auto;
+}
+
+}

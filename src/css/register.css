@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1565c0, #42a5f5);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.register-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.register-card {
+    width: 650px;
+    background: #ffffff;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.register-card h1 {
+    text-align: center;
+    color: #1565c0;
+    margin-bottom: 10px;
+}
+
+.register-card p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.register-form {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+}
+
+.form-group input,
+.form-group select {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #1565c0;
+    box-shadow: 0 0 5px rgba(21,101,192,0.3);
+}
+
+.full-width {
+    grid-column: span 2;
+}
+
+.register-btn {
+    width: 100%;
+    padding: 14px;
+    background: #1565c0;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 17px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.register-btn:hover {
+    background: #0d47a1;
+}
+
+.login-link {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.login-link a {
+    color: #1565c0;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+.success-message {
+    display: none;
+    margin-top: 20px;
+    background: #d4edda;
+    color: #155724;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.error-message {
+    display: none;
+    margin-top: 20px;
+    background: #f8d7da;
+    color: #721c24;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+.register-card{
+    width:100%;
+    padding:25px;
+}
+
+.register-form{
+    grid-template-columns:1fr;
+}
+
+.full-width{
+    grid-column:span 1;
+}
+
+}
